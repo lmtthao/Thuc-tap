@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald&family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif !important;
+}
+
+body {
+    display:flex;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position:center;
+    
+}
+.custom-form {
+    border:none;/* Màu sắc của border */
+    padding: 20px; /* Khoảng cách giữa các trường và viền */
+    border-radius: 16px; /* Làm tròn các góc */
+    background-color: #FFECDB;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    flex-direction: column; /* Đảm bảo các phần tử con (như .sign-in-title) xếp theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản trong .sign-in-title */
+    box-shadow: -2px 8px 18px rgba(217, 95, 29, 0.45);
+    position: relative;
+  }
+  .custom-form .form-item{
+    width: 333px;
+    height: 319px;
+    margin: 10px 20px 0;
+  }
+  .custom-form .sign-in-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #D4530C;
+    width: 100%;  /* Chiều rộng 100% của bố cục cha để căn giữa */
+    height: 48px;
+    display: flex;  /* Sử dụng Flexbox */
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;  /* Căn giữa theo chiều dọc */
+}
+
+
+.custom-form .ant-select,
+.custom-form .ant-select-selector{
+    border:none;
+    width: 309px;
+    height: 38px;
+    text-align: left;
+}
+
+.custom-form .ant-input,
+.custom-form .ant-input-password{
+    border:none;
+    width: 309px;
+    height: 38px;
+    text-align: left;
+    padding: 0 12px; 
+}
+.custom-form .ant-input::placeholder,
+.custom-form .ant-input-password::placeholder {
+  line-height: 48px; 
+}
+
+.custom-form .ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector{
+    border:none;
+}
+
+.custom-form .form-item .ant-form-item-label{
+    margin-left: 5px;
+    color:#183459 !important;
+}
+
+.custom-form .ant-btn{
+    width: 309px;
+    height: 46px;
+    color:white;
+    background-color: #D4530C !important;
+    align-items:center ;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.custom-form .ant-checkbox-wrapper {
+    display: flex;
+    justify-content: flex-start;  /* Đặt checkbox ở bên trái */
+    align-items: center;  /* Căn giữa checkbox theo chiều dọc */
+    margin-bottom: 16px;  /* Khoảng cách dưới nếu cần */
+  }
+  
+  .custom-form .ant-checkbox + span {
+    margin-left: 8px;  /* Khoảng cách giữa checkbox và nhãn */
+  }
+
+  .custom-form .ant-checkbox-checked .ant-checkbox-inner {
+    border-color: #D4530C;  /* Đổi màu viền khi checkbox được tick */
+    background-color: #D4530C !important;  /* Đổi màu nền của checkbox khi được tick */
+  }
+  
+  .custom-form .form-layer {
+    position: absolute;
+    top: 90px; 
+    left: -231px; 
+    width: 246px; 
+    height: 188px; 
+    background: linear-gradient(135deg, #D4530C, #6E2B06);
+    color: white; /* Màu chữ */
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 28px 17px; 
+    z-index: -99; /* Đặt layer phía sau form */
+  }
+  .custom-form .form-img {
+    position: absolute;
+    top: 130px; 
+    left: -350px; 
+    width: 246px; 
+    height: 188px; 
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 28px 17px; 
+    z-index: -99; /* Đặt layer phía sau form */
+  }
+
+  .custom-form .form-img img{
+    width: 200%;
+    filter: sepia(1) saturate(2) hue-rotate(-60deg);
+  }
