@@ -25,7 +25,7 @@ const App = () => {
   const navigate = useNavigate()
   const onFinish = () => {
     // Không kiểm tra form, trực tiếp chuyển hướng
-    navigate('/main');
+    navigate('/');
   };
 
   return (
