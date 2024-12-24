@@ -6,7 +6,7 @@
     font-family: 'Montserrat',sans-serif !important;
 }
 
-body {
+.body {
     display:flex;
     height: 100vh;
     overflow: hidden;
@@ -136,3 +136,7 @@ body {
     width: 200%;
     filter: sepia(1) saturate(2) hue-rotate(-60deg);
   }
+
+.navbar-menu-contaier{
+  display:none;
+}

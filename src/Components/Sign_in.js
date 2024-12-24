@@ -25,10 +25,11 @@ const App = () => {
   const navigate = useNavigate()
   const onFinish = () => {
     // Không kiểm tra form, trực tiếp chuyển hướng
-    navigate('/');
+    navigate('/main');
   };
 
   return (
+    <div className='body'>
     <Form className='custom-form'
       {...formItemLayout}
       form={form}
@@ -108,6 +109,7 @@ const App = () => {
         <img src={Logo} alt=''></img>
       </div>
     </Form>
+    </div>
   );
 };
 

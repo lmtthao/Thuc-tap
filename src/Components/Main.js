@@ -1,10 +1,9 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Main = () => {
   return (
-    <div>
-      <h1>Trang chu</h1>
-    </div>
+    <Navbar></Navbar>
   )
 }
 

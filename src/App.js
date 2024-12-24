@@ -8,8 +8,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Sign_in />}></Route>
-        <Route path="/" element={<Main />}></Route>
+        <Route path="/" element={<Sign_in />}></Route>
+        <Route path="/main" element={<Main />}></Route>
       </Routes>
     </Router>
   );
