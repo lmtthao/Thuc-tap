@@ -15,6 +15,10 @@ nav {
   .navbar-menu-container {
     display: none;
   }
+  .navbar-links-container {
+    display: flex;
+    align-items: center;
+  }
   .navbar-links-container a {
     margin-right: 3rem;
     text-decoration: none;
@@ -23,7 +27,7 @@ nav {
     font-weight: 600;
   }
 
-  .navbar-links-container a::before{
+  /* .navbar-links-container a::before{
     content: ' ';
     position: absolute;
     top:100%;
@@ -36,4 +40,61 @@ nav {
 
   .navbar-links-container a:hover::before{
     width: 100%;
+  } */
+
+  .navbar-links-container button{
+    border-radius: 6px;
+    padding:8px;
+    width: auto;
+    height: 49px;
+    margin-right: 20px;
+    text-align: left;
   }
+
+ .btn-year{
+    display: flex;
+    align-items: center;
+    background-color: #FFF9F5;
+    color:#D4530C;
+    border: 1px solid #D4530C ;
+  }
+
+  .year-info {
+    text-align: left; /* Căn chữ bên trái */
+    line-height: 1.4; /* Điều chỉnh khoảng cách giữa các dòng */
+  }
+  .year-bold {
+    font-weight: bold; /* Làm cho chữ in đậm */
+  }
+  
+  .icon-down {
+    margin-left: 10px; /* Khoảng cách giữa chữ và mũi tên */
+    font-size: 1rem;
+  }
+
+  .btn-name {
+    display: flex;
+    align-items: center;
+    background-color: #183459;
+    color:white;
+    border: none;
+  }
+  
+  .icon-left {
+    margin-right: 10px;
+    font-size: 1.2rem; /* Adjust icon size */
+  }
+  .user-name {
+    font-weight: bold;
+  }
+  .user-info {
+    flex-grow: 1;
+    text-align: left;
+    line-height: 1.4;
+  }
+  
+  .icon-right {
+    margin-left: 15px;
+    font-size: 1.2rem; /* Adjust icon size */
+  }
+  

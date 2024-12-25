@@ -1,0 +1,35 @@
+* { 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Navbar nằm trên cùng */
+  .navbar {
+    background-color: #f8f9fa;
+    padding: 10px;
+    flex-shrink: 0; /* Đảm bảo navbar không bị co lại */
+  }
+  
+  /* Nội dung chính của trang */
+  .content {
+    flex: 1;  /* Nội dung sẽ chiếm phần còn lại của không gian */
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+  }
+  
+  /* Footer nằm dưới cùng */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0;  /* Đảm bảo footer không bị co lại */
+  }
+  

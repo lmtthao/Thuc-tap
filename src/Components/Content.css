@@ -1,0 +1,71 @@
+* { 
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.main-content{
+    padding-top:10px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 300px 0;
+}
+
+.new-content {
+    display: flex; /* Sử dụng flexbox để sắp xếp các phần tử nằm ngang */
+    justify-content: space-between; /* Căn đều các phần tử */
+    align-items: center; /* Canh giữa dọc các phần tử */
+  }
+  
+  .header-new-content {
+    display: flex; /* Dùng flexbox cho phần này */
+    justify-content: space-between;
+    width: 100%; /* Đảm bảo chiếm hết chiều rộng */
+  }
+  
+.title{
+    font-size:26px;
+    font-weight: 800;
+    color:#183459;
+    width: 100%;
+    margin-top: 23px;
+}
+
+.find {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(244, 189, 158);
+    border-radius:6px 0 0 6px; /* Viền bo góc bên trái */
+    width: 250px;
+    background: rgb(255, 236, 219) !important;
+    border-right:none;
+  }
+  .search-input::placeholder {
+    color: #D4530C; /* Màu placeholder */
+    font-size: 16px; /* Kích thước chữ trong placeholder */
+  }
+
+  .search-button {
+    background: rgb(255, 236, 219) !important;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius:0 6px 6px 0; /* Viền bo góc bên phải */
+    border: 1px solid rgb(244, 189, 158);
+    border-left:none;
+  }
+  
+  .search-button svg {
+    color: #D4530C; /* Đặt màu cho biểu tượng kính lúp */
+    font-size: 18px;
+  }

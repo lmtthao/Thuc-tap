@@ -3,7 +3,9 @@ import './Navbar.css';
 import Logo from "../Assets/Frame 10.png";
 import { HiOutlineBars3 } from 'react-icons/hi2';
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-
+import { AiOutlineDown } from "react-icons/ai";
+import { FaUserCircle } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 
 const Navbar = () => {
     const [openMenu,setOpenMenu]=useState(false)
@@ -39,6 +41,23 @@ const Navbar = () => {
             <a href=''>Thông báo</a>
             <a href=''>Thống kê</a>
             <a href=''>Hỗ trợ</a>
+            <button className='btn-year'>
+                <span className='year-info'>
+                    Niên khóa<br />
+                <span className='year-bold'>2024 - 2025</span>
+                </span>
+                <FaAngleDown className='icon-down' />
+            </button>
+
+            <button className='btn-name'>
+                <FaUserCircle className='icon-left' />
+                <span className='user-info'>
+                    <span className='user-name'>Lương Mai Thanh Thảo</span><br />
+                    <span className='user-role'>Học sinh</span>
+                </span>
+                <FaAngleDown className='icon-right' />
+            </button>
+
         </div>
 
         <div className='navbar-menu-container'>

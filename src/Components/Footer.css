@@ -1,0 +1,105 @@
+/* Footer styles */
+.footer {
+    margin-bottom: 0;
+    background-color: rgba(212, 83, 12, 1);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.row{
+    text-align: left;
+}
+h6{
+    font-weight: bold;
+}
+/* Contact input section */
+.contact-text {
+    display: flex;
+    justify-content:flex-start;
+    gap: 10px;
+}
+
+.contact-text input {
+    width: 258px;
+    height: 46px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 236, 219, 1);
+    border: none;
+    color: rgba(212, 83, 12, 1);
+    font-size: 14px;
+}
+
+.contact-text input::placeholder {
+    color: rgba(212, 83, 12, 1);
+    font-size: 12px;
+}
+
+.contact-text input:hover {
+    border: none;
+    outline: none;
+}
+
+.contact-text button {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    background-color: rgba(255, 189, 67, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.contact-text button:hover {
+    background-color: rgba(244, 158, 50, 1);
+}
+
+/* Section padding */
+.footer-section {
+    padding: 30px 135px 0px 135px;
+}
+
+/* Footer text styles */
+.text {
+    color: var(--Primary-3, #FFBD43);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Footer divider */
+footer hr {
+    border: solid 1px rgba(244, 189, 158, 1);
+}
+
+/* Footer columns */
+.col-md-7 p {
+    font-size: 12px;
+}
+
+.col-md-4 p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Notification badge */
+.notifications-bagde {
+    position: absolute;
+    top: 9px;
+    right: -13px;
+    background-color: #dc2545;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 10px;
+}
+
+/* User info */
+#user-info {
+    display: flex;
+    align-items: center;
+}
+
+#user-info span {
+    margin-right: 10px;
+}
