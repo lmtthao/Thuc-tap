@@ -54,7 +54,7 @@ const Navbar = () => {
                 <FaUserCircle className='icon-left' />
                 <span className='user-info'>
                     <span className='user-name'>Lương Mai Thanh Thảo</span><br />
-                    <span className='user-role'>Học sinh</span>
+                    <span className='user-role'>Admin trường</span>
                 </span>
                 <FaAngleDown className='icon-right' />
             </button>

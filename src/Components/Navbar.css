@@ -25,9 +25,10 @@ nav {
     color: black;
     font-size: 1.1rem;
     font-weight: 600;
+    position: relative;
   }
 
-  /* .navbar-links-container a::before{
+  .navbar-links-container a::before{
     content: ' ';
     position: absolute;
     top:100%;
@@ -36,11 +37,12 @@ nav {
     height: 2px;
     background: #F4BD9E;
     transition: 0.3s;
+    display: block;
   }
 
   .navbar-links-container a:hover::before{
     width: 100%;
-  } */
+  }
 
   .navbar-links-container button{
     border-radius: 6px;
