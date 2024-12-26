@@ -7,6 +7,7 @@ import { AiOutlineDown } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
 
+
 const Navbar = () => {
     const [openMenu,setOpenMenu]=useState(false)
     const menuOptions=[

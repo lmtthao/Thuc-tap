@@ -103,10 +103,15 @@
     background-color: #D4530C !important;  /* Đổi màu nền của checkbox khi được tick */
   }
   
-  .custom-form .form-layer {
+  .form-left {
+    width: 290px;
+    position: relative;
+  }
+
+  .form-layer {
     position: absolute;
-    top: 90px; 
-    left: -231px; 
+    top: -200px;
+    left:60px;
     width: 246px; 
     height: 188px; 
     background: linear-gradient(135deg, #D4530C, #6E2B06);
@@ -118,11 +123,11 @@
     border-radius: 28px 17px; 
     z-index: -99; /* Đặt layer phía sau form */
   }
-  .custom-form .form-img {
+  .form-img {
     position: absolute;
-    top: 130px; 
-    left: -350px; 
-    width: 246px; 
+    top: -170px; 
+    left:-90px;
+    width: 276px; 
     height: 188px; 
     font-size: 12px;
     font-weight: bold;
@@ -132,7 +137,7 @@
     z-index: -99; /* Đặt layer phía sau form */
   }
 
-  .custom-form .form-img img{
+  .form-img img{
     width: 200%;
     filter: sepia(1) saturate(2) hue-rotate(-60deg);
   }
