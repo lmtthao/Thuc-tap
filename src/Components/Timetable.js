@@ -1,5 +1,10 @@
 import React from 'react'
 import './Timetable.css'
+import { Cascader, ConfigProvider, Select } from 'antd';
+
+const onChange = (value) => {
+    console.log(value);
+  };
 
 const timetableData = {
     morning: [
@@ -18,81 +23,65 @@ const timetableData = {
     ]
 };
 
+const options = [
+    {
+      value: 'zhejiang',
+      label: 'Zhejiang',
+    },
+    {
+      value: 'jiangsu',
+      label: 'Jiangsu',
+    },
+  ];
 
 const Timetable = () => {
   return (
-    <div>
-      <div class="tkd">
-            <div class="container schedule">
+    <ConfigProvider 
+        theme={{
+            components: {
+                Cascader: {
+                    controlItemWidth: '340px'
+                }
+            }
+        }}  
+    >
+      <div className="tkd">
+            <div className="container schedule">
                 <p>Thời khóa biểu</p>
-                <p class="back">Thời khóa biểu</p>
+                <p className="back">Thời khóa biểu</p>
             </div>
-            <div class="container dropdown-menus">
-                <div class="select-menu">
-                    <div class="select-btn">
-                        <span class="sBtn-text">Chọn học kì</span>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <ul class="options">
-                        <li class="option">
-                            <span class="option-text">Học kì I (2023 - 2024)</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">Học kì II (2023 - 2024)</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="select-menu">
-                    <div class="select-btn">
-                        <span class="sBtn-text">Xem theo tuần</span>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <ul class="options">
-                        <li class="option">
-                            <span class="option-text">Xem theo tuần</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">Xem theo ngày</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="select-menu">
-                    <div class="select-btn">
-                        <span class="sBtn-text">Chọn tuần</span>
-                        <i class="bx bx-chevron-down"></i>
-                    </div>
-                    <ul class="options">
-                        <li class="option">
-                            <span class="option-text">???</span>
-                        </li>
-                        <li class="option">
-                            <span class="option-text">???</span>
-                        </li>
-                    </ul>
+            <div className="container dropdown-menus">
+                <div className="select-menu">
+                <Select
+                    className='select-btn'
+                    placeholder="Select a person"
+                    popupMatchSelectWidth={true}
+                    options={options}
+                />
                 </div>
             </div>
-            <hr class="custom-hr"></hr>
-            <div class="container gird-schedule" id="morning-schedule">
-                <div class="wrapper">
-                    <div class="box1"></div>
-                    <div class="box2">Tiết</div>
-                    <div class="box3">Thứ 2</div>
-                    <div class="box4">Thứ 3</div>
-                    <div class="box5">Thứ 4</div>
-                    <div class="box6">Thứ 5</div>
-                    <div class="box7">Thứ 6</div>
-                    <div class="box8">Thứ 7</div>
+            <hr className="custom-hr"></hr>
+            <div className="container gird-schedule" id="morning-schedule">
+                <div className="wrapper">
+                    <div className="box1"></div>
+                    <div className="box2">Tiết</div>
+                    <div className="box3">Thứ 2</div>
+                    <div className="box4">Thứ 3</div>
+                    <div className="box5">Thứ 4</div>
+                    <div className="box6">Thứ 5</div>
+                    <div className="box7">Thứ 6</div>
+                    <div className="box8">Thứ 7</div>
                 </div>
-                <div class="wrapper wrapper-2 wrapper-morning" id="wrapper-morning">
-                    <div class="box1">Sáng</div>
+                <div className="wrapper wrapper-2 wrapper-morning" id="wrapper-morning">
+                    <div className="box1">Sáng</div>
                 </div>   
-                <div class="wrapper wrapper-2 wrapper-afternoon" id="wrapper-afternoon">
-                    <div class="box1">Chiều</div>
+                <div className="wrapper wrapper-2 wrapper-afternoon" id="wrapper-afternoon">
+                    <div className="box1">Chiều</div>
                 </div> 
             </div>
         </div>
 
-    </div>
+    </ConfigProvider>
   )
 }
 

@@ -19,7 +19,7 @@ nav {
     display: flex;
     align-items: center;
   }
-  .navbar-links-container a {
+  .navbar-links-container > a {
     margin-right: 3rem;
     text-decoration: none;
     color: black;
@@ -28,7 +28,7 @@ nav {
     position: relative;
   }
 
-  .navbar-links-container a::before{
+  .navbar-links-container > a::before{
     content: ' ';
     position: absolute;
     top:100%;
@@ -40,8 +40,12 @@ nav {
     display: block;
   }
 
-  .navbar-links-container a:hover::before{
+  .navbar-links-container > a:hover::before{
     width: 100%;
+  }
+
+  .active-link::before {
+    width: 100% !important;
   }
 
   .navbar-links-container button{
@@ -94,9 +98,24 @@ nav {
     text-align: left;
     line-height: 1.4;
   }
+
+  .user-info a {
+    color: white !important;
+    text-decoration: none;
+  }
   
   .icon-right {
     margin-left: 15px;
     font-size: 1.2rem; /* Adjust icon size */
+  }
+
+  .ant-dropdown-menu {
+    width: 270px;
+    transform: translate(0px, 5px);
+  }
+
+  .ant-dropdown-menu-title-content a {
+    text-decoration: none !important;
+    font-size: 16px;
   }
   

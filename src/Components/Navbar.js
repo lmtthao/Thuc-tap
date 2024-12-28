@@ -6,6 +6,9 @@ import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText
 import { AiOutlineDown } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
 import { FaAngleDown } from "react-icons/fa";
+import { Link, NavLink } from 'react-router-dom';
+import { Dropdown, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 
 const Navbar = () => {
@@ -13,22 +16,38 @@ const Navbar = () => {
     const menuOptions=[
         {
             text:"Trang chủ",
+            url: "/main"
         },
         {
             text:"Thời khóa biểu",
+            url: "/tkb"
         },
         {
-            text:"SLL điện tử",
+            text:"Danh sách lớp",
+            url: "/sll"
         },
         {
             text:"Thông báo",
+            url: "/noti"
         },
         {
             text:"Thống kê",
+            url: "/statistic"
         },
         {
             text:"Hỗ trợ",
+            url: "/support"
         }
+    ];
+
+    const items = [
+        {
+          label: (
+            <a rel="noopener noreferrer" href="/">
+                Đăng xuất
+            </a>),
+          key: '3',
+        },
     ];
     return <nav>
         <div className='nav-logo-container'>
@@ -36,12 +55,15 @@ const Navbar = () => {
         </div>
         
         <div className='navbar-links-container'>
-            <a href=''>Trang chủ</a>
-            <a href=''>Thời khóa biểu</a>
-            <a href=''>SLL điện tử</a>
-            <a href=''>Thông báo</a>
-            <a href=''>Thống kê</a>
-            <a href=''>Hỗ trợ</a>
+            {menuOptions.map((item) => (
+                <NavLink
+                    key={item.url} 
+                    to={item.url} 
+                    className={({ isActive }) => isActive ? "active-link" : ""}
+                    >
+                    {item.text}
+                </NavLink>
+            ))}
             <button className='btn-year'>
                 <span className='year-info'>
                     Niên khóa<br />
@@ -50,14 +72,23 @@ const Navbar = () => {
                 <FaAngleDown className='icon-down' />
             </button>
 
-            <button className='btn-name'>
-                <FaUserCircle className='icon-left' />
-                <span className='user-info'>
-                    <span className='user-name'>Lương Mai Thanh Thảo</span><br />
-                    <span className='user-role'>Admin trường</span>
-                </span>
-                <FaAngleDown className='icon-right' />
-            </button>
+            <Dropdown
+                menu={{
+                    items,
+                }}
+                trigger={['click']}
+                >
+                <button className='btn-name'>
+                    <FaUserCircle className='icon-left' />
+                    <span className='user-info'>
+                        <a onClick={(e) => e.preventDefault()}>
+                            <span className='user-name'>Lương Mai Thanh Thảo</span><br />
+                            <span className='user-role'>Admin trường</span>
+                        </a>
+                    </span>
+                    <FaAngleDown className='icon-right' />
+                </button>
+            </Dropdown>
 
         </div>
 
