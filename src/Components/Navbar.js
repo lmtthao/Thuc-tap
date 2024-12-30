@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import Logo from "../Assets/Frame 10.png";
 import { HiOutlineBars3 } from 'react-icons/hi2';
@@ -24,19 +24,19 @@ const Navbar = () => {
         },
         {
             text:"Danh sách lớp",
-            url: "/sll"
+            url: "/blank"
         },
         {
             text:"Thông báo",
-            url: "/noti"
+            url: "/blank2"
         },
         {
             text:"Thống kê",
-            url: "/statistic"
+            url: "/blank3"
         },
         {
             text:"Hỗ trợ",
-            url: "/support"
+            url: "/blank4"
         }
     ];
 
@@ -49,6 +49,7 @@ const Navbar = () => {
           key: '3',
         },
     ];
+    
     return <nav>
         <div className='nav-logo-container'>
             <img src={Logo} alt=''></img>

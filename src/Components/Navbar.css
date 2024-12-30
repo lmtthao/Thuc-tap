@@ -119,3 +119,11 @@ nav {
     font-size: 16px;
   }
   
+  @media screen and (max-width: 1430px) {
+    .navbar-menu-container {
+      display: block;
+    }
+    .navbar-links-container>a{
+      display: none;
+    }
+  }

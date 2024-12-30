@@ -47,7 +47,7 @@
 
 .custom-form .ant-select,
 .custom-form .ant-select-selector{
-    border:none;
+    border:none !important;
     width: 309px;
     height: 38px;
     text-align: left;
